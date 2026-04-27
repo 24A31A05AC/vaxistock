@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fdf0db;
+    color: #2d2d2d;
+}
+
+nav {
+    background-color: #1c7236;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 8px 15px;
+}
+
+nav ul li a.active {
+    background-color: #8b5e3c;
+    border-radius: 20px;
+}
+
+header {
+    color: black;
+    padding: 35px 30px 20px 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 35px;
+    font-weight: 640;
+    margin-bottom: 0;
+}
+
+header p{
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.summary{
+    display: flex;
+    gap: 20px;
+    padding: 8px 30px 30px 30px;
+    flex-wrap: wrap;
+}
+
+.summary div {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.30);
+    flex: 1;
+    border-left: 4px solid #8b5e3c;
+}
+
+.summary div p:first-child {
+    font-size: 17px;
+    font-weight: 700;
+    color: #3b3838;
+    margin-bottom: 8px;
+}
+
+.summary div p:last-child {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2d5a3d;
+}
+
+.alerts, .recent {
+    margin: 0px 30px 30px 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.30);
+}
+
+.alerts h2, .recent h2 {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f5f0e8;
+}
+
+#no-alert-msg {
+    background-color: rgb(245, 207, 207);
+    border-left: 4px solid red;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+#recent_fall {
+    background-color: rgb(188, 255, 188);
+    border-left: 4px solid green;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background-color: #8b5e3c;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 13px;
+}
+
+td {
+    padding: 12px 15px;
+    font-size: 13px;
+    border-bottom: 1px solid #fddca8;
+}
+
+th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+footer {
+    background-color: #2d5a3d;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+
+.form-panel {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    width: 35%;
+    height: fit-content;
+}
+
+.list-panel {
+    flex: 1;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+.form-panel h2 {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f5f0e8;
+}
+
+label {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    color: #3b3838;
+    margin-bottom: 5px;
+    margin-top: 8px;
+}
+
+input[type="text"], input[type="date"], select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #8b5e3c;
+    border-width: 2px;
+}
+
+button[type="submit"]{
+    width: 100%;
+    padding: 12px;
+    background-color: #299249;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #2d5a3d;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.radio-group label {
+    margin: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    width: auto;
+    cursor: pointer;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 1px solid #1c7236;
+    border-radius: 20px;
+    background-color: white;
+    color: #1c7236;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.active-filter {
+    background-color: #1c7236;
+    color: white;
+}
+
+.filter-btn:hover {
+    background-color: #1c7236;
+    color: white;
+}
+
+.vacc-panel {
+    flex: 1;
+    padding: 10px;
+}
+
+input[type="search"] {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #8b5e3c;
+    border-radius: 12px;
+    font-size: 14px;
+    font-family: 'Poppins' ,sans-serif;
+    margin-bottom: 3px;
+}
+
+#vacc-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.vacc-card {
+    background-color: white;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.30);
+    border-radius: 12px;
+    border-left: 3px solid #1c7236;
+    padding: 15px;
+    margin-bottom: 12px;
+}
+
+.vacc-card h3 {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.vacc-card p {
+    font-size: 13px;
+    color: #6b6b6b;
+}
+
+.status-overdue {
+    border-left: 4px solid #c0392b;
+}
+
+.status-due_today {
+    border-left: 4px solid #e67e22;
+}
+
+.status-upcoming {
+    border-left: 4px solid #27ae60;
+}
+
+.status-completed {
+    border-left: 4px solid #95a5a6;
+}
+
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+}
+
+.badge-overdue {
+    background: #c0392b;
+}
+
+.badge-due_today {
+    background: #e67e22;
+}
+
+.badge-upcoming {
+    background: #27ae60;
+}
+
+.badge-completed {
+    background: #95a5a6;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.btn-done {
+    padding: 6px 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-delete {
+    padding: 6px 12px;
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.summary-bar {
+    display: flex;
+    gap: 30px;
+    background-color: white;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    margin: 0 30px 20px 30px;
+}
+
+.summary-bar span {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1c7236;
+    display: block;
+}
+
+.filter-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+#filter-animal {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.history-wrapper {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#history-search {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    width: 180px;
+    flex-shrink: 0;
+}
+
+#history-table {
+    width: 100%;
+    margin: 0;
+}
+
+#no-history-message {
+    color: #6b6b6b;
+    text-align: center;
+    padding: 40px;
+}
+
+#no-history-msg a {
+    color: #1c7236;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#no-history-msg a:hover {
+    text-decoration: underline;
+}
+
+.history-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+.summary-bar-item p {
+    font-size: 13px;
+    color: #6b6b6b;
+    margin-bottom: 4px;
+}

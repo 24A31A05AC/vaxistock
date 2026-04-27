@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaxiStock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="index.html">VaxiStock</a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="animals.html">Animals</a></li>
+            <li><a href="vaccination.html" class="active">Vaccination</a></li>
+            <li><a href="history.html">History</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1> Vaccination Schedule </h1>
+        <p> Schedule and manage vaccinations for your livestock </p>
+    </header>
+    <main>
+    <div class="container">
+        <div class="form-panel">
+            <form id="vacc-form">
+                <label for="vacc-animal">Select Animal: </label>
+                <select id="vacc-animal">
+                    <option value="" selected>-- Select Animal --</option>
+                </select><br>
+                <label for="vacc-name">Vaccine Name: </label>
+                <select id="vacc-name">
+                    <option value="fmd">FMD Vaccine</option>
+                    <option value="brucellosis">Brucellosis</option>
+                    <option value="anthrax">Anthrax</option>
+                    <option value="blackleg">Blackleg</option>
+                    <option value="bvd">BVD</option>
+                    <option value="ppr">PPR Vaccine</option>
+                    <option value="goat-pox">Goat Pox</option>
+                    <option value="enterotoxaemia">Enterotoxaemia</option>
+                    <option value="foot-rot">Foot Rot</option>
+                    <option value="pasteurellosis">Pasteurellosis</option>
+                    <option value="clostridial">Clostridial</option>
+                    <option value="rabies">Rabies</option>
+                    <option value="other">Other (Custom)</option>
+                </select>
+                <input type="text" id="custom-vacc" style="display:none" placeholder="Enter custom vaccine name">
+                <label for="vacc-date">Scheduled Date: </label>
+                <input type="date" id="vacc-date">
+                <label for="vacc-notes">Notes: </label>
+                <textarea id="vacc-notes" placeholder="Enter Notes"></textarea>
+                <button type="submit">Schedule Vaccination</button>
+            </form>
+        </div>
+        <div class="vacc-panel">
+            <div class="filter-buttons">
+                <button class="filter-btn active-filter" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="overdue">Overdue</button>
+                <button class="filter-btn" data-filter="due_today">Due Today</button>
+                <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <input type="search" id="vacc-search" placeholder="Search by animal name...">
+            <div id="vacc-list">
+            
+            </div>
+            <p id="no-vacc-msg">No vaccinations scheduled yet.</p>
+        </div>
+    </div>
+    </main>    
+    <footer>
+            Livestock Vaccination — Keeping your livestock healthy
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

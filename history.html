@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaxiStock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="index.html">VaxiStock</a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="animals.html">Animals</a></li>
+            <li><a href="vaccination.html">Vaccination</a></li>
+            <li><a href="history.html" class="active">History</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1> Vaccination History </h1>
+        <p> Complete log of all vaccinations </p>
+    </header>
+    <main>
+        <div class="history-wrapper">
+            <div class="summary-bar">
+                <div class="summary-bar-item">
+                    <p>Total Records</p>
+                    <span id="total-records">0</span>
+                </div>
+                <div class="summary-bar-item">
+                    <p>Animals Tracked</p>
+                    <span id="animals-tracked">0</span>
+                </div>
+            </div>
+            <div class="history-card">
+                <div class="filter-row">
+                    <select id="filter-animal">
+                        <option value="all" selected>All Animals</option>
+                    </select>
+                    <input type="search" id="history-search" placeholder="Search by vaccine or animal...">
+                </div>
+                <table id="history-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Animal</th>
+                            <th>Species</th>
+                            <th>Vaccine</th>
+                            <th>Scheduled Date</th>
+                            <th>Completed Date</th>
+                            <th>Next Due</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-tbody">
+                        
+                    </tbody>
+                </table>
+                <div id="no-history-msg">
+                    <p>No completed vaccinations yet.</p>
+                    <a href="vaccination.html">Go to Vaccinations →</a>
+                </div>
+            </div>
+        </div>
+    </main>    
+    <footer>
+            Livestock Vaccination — Keeping your livestock healthy
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

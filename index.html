@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaxiStock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="index.html">VaxiStock</a>
+        </div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="animals.html">Animals</a></li>
+            <li><a href="vaccination.html">Vaccination</a></li>
+            <li><a href="history.html">History</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Welcome to Animal Vaccination</h1>
+        <p id="current-date"></p>
+    </header>
+    <main>
+        <section id="summary" class="summary">
+            <div class="totani">
+                <p>Total Animals</p>
+                <p id="tnum"></p>
+            </div>
+            <div class="overdue">
+                <p>Overdue</p>
+                <p id="odnum"></p>
+            </div>
+            <div class="today">
+                <p>Due Today</p>
+                <p id="dtnum"></p>
+            </div>
+            <div class="upcoming">
+                <p>Upcoming (next 7 Days)</p>
+                <p id="upnum"></p>
+            </div>
+        </section>
+        <section id="alerts" class="alerts">
+            <h2>Alerts</h2>
+            <div id="alert-list"></div>
+            <p id="no-alert-msg">No urgent alerts. All good!</p>
+        </section>
+        <section id="recent" class="recent">
+            <h2>Recent Activity</h2>
+            <p id="recent_fall">No recent activity yet.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="name-animal">Name of Animal</th>
+                        <th>Vaccine</th>
+                        <th>Scheduled Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="recent-tbody">
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        Livestock Vaccination — Keeping your livestock healthy
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
